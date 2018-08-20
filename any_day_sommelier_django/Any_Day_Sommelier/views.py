@@ -24,4 +24,31 @@ class FoodDetail(generics.RetrieveUpdateDestroyAPIView):
   serializer_class = FoodSerializer
 
 
-# Create your views here.
+####### WINE #######
+
+# Wine Index
+
+def wine_list(request):
+  wines = Wine.objects.all()
+  return render(request, 'any_day_sommelier/wine_list.html', {'wines': wines})
+
+# Wine Show
+
+def wine_detail(request, pk):
+  wine = Wine.objects.get(id=pk)
+  return render(request, 'any_day_sommelier/wine_detail.html', {'wine': wine})
+
+####### FOOD #######
+
+# Food Index
+
+def food_list(request):
+  food = Food.objects.all()
+  return render(request, 'any_day_sommelier/food_list.html', {'food': food})
+
+# Food Show
+
+def food_detail(request, pk):
+  food = Food.objects.get(id=pk)
+  return render(request, 'any_day_sommelier/food_detail.html', {'food': food})
+  
