@@ -51,4 +51,13 @@ def food_list(request):
 def food_detail(request, pk):
   food = Food.objects.get(id=pk)
   return render(request, 'any_day_sommelier/food_detail.html', {'food': food})
+
+####### PAIRING #######
+
+def pairing_list(request):
+  pairings = Pairing.objects.all()
+  return render(request, 'any_day_sommelier/pairing_list.html', {'pairing': pairing})
+
+
+
   

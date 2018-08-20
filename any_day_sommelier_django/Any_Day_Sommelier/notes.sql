@@ -1,4 +1,4 @@
-notes.sql
+
 
 ERD-----------------
 
@@ -38,11 +38,11 @@ ROUTES------------------
 
 
 /                 GET         index         Home
-/pairing          GET         index         Index of all pairings
-/wine/:id         GET         show          Show individual wine - and which entrees it goes with
-/wine             GET         index         Index of all wines
-/food/:id         GET         show          Show individual dish - and wines it goes with
-/food             GET         index         Index all dishes
+*/pairing          GET         index         Index of all pairings
+*/wine/:id         GET         show          Show individual wine - and which entrees it goes with
+*/wine             GET         index         Index of all wines
+*/food/:id         GET         show          Show individual dish - and wines it goes with
+*/food             GET         index         Index all dishes
 /auth             POST        create        Create new user
 /auth/:id         GET         show          View user profile - including their liked pairings
 /auth/:id         DELETE      destroy       Destroy account
