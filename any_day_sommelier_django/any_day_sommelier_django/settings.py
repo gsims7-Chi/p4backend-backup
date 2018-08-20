@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Any_Day_Sommelier',
-    # 'rest_framework'
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
