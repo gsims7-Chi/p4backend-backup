@@ -21,16 +21,16 @@ class User(models.Model):
     return self.username
 
 class Pairing(models.Model):
-  wine = models.ForeignKey(Wine, on_delete=models.CASCADE, related_name='')
-  food = models.ForeignKey(Food, on_delete=models.CASCADE, related_name='')
+  wine = models.ForeignKey(Wine, on_delete=models.CASCADE, related_name='pairings')
+  food = models.ForeignKey(Food, on_delete=models.CASCADE, related_name='pairings')
 
   def __str__(self):
-    return self.
+    return self.wine
 
 class Favorite(models.Model):
-  user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='')
-  pairing = models.ForeignKey(Pairing, on_delete=models.CASCADE, related_name='')
+  user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='favorites')
+  pairing = models.ForeignKey(Pairing, on_delete=models.CASCADE, related_name='favorites')
 
   def __str__(self):
-    return self.
+    return self.user
 
