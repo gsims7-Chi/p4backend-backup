@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
 
+LOGIN_REDIRECT_URL = 'admin/'
+
 
 # Application definition
 

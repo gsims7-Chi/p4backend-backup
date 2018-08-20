@@ -15,4 +15,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'any_day_sommelier_django.settin
 
 application = get_wsgi_application()
 
-application = DjangoWhiteNoise(application)
+# application = DjangoWhiteNoise(application)
