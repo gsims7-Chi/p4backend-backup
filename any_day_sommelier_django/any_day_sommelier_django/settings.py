@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'any_day_sommelier', 
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -69,14 +71,21 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'any_day_sommelier_django.wsgi.application'
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+    'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly']
+}
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'any_day_sommelier',
+        'USER': 'sommelier',
+        'PASSWORD': 'anyday',
+        'HOST': 'localhost'
     }
 }
 
