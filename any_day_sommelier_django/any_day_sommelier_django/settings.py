@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'any_day_sommelier',
-    'rest_framework'
+    'Any_Day_Sommelier',
+    # 'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -82,7 +82,7 @@ REST_FRAMEWORK = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Any_Day_Sommelier',
+        'NAME': 'any_day_sommelier',
         'USER': 'sommelier',
         'PASSWORD': 'anyday',
         'HOST': 'localhost'
@@ -145,4 +145,3 @@ STATICFILES_DIRS = (
 # Configure Django App for Heroku.
 import django_heroku
 django_heroku.settings(locals())
-parent of 11807f7... things were added to make heroku work

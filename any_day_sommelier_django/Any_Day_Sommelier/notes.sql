@@ -20,9 +20,9 @@ CREATE TABLE user (
 );
 
 CREATE TABLE pairing (
-  id SERIAL PRIMARY KEY, 
-  wine_id INTEGER REFERENCES wine(id), 
-  food_id INTEGER REFERENCES food(id)  
+  id SERIAL PRIMARY KEY,
+  wine_id INTEGER REFERENCES wine(id),
+  food_id INTEGER REFERENCES food(id)
 );
 
 CREATE TABLE favorites (
