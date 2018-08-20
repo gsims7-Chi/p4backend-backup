@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Any_Day_Sommelier'
+    'any_day_sommelier',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -70,6 +71,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'any_day_sommelier_django.wsgi.application'
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+    'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly']
+}
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -77,7 +82,7 @@ WSGI_APPLICATION = 'any_day_sommelier_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'any_day_sommelier',
+        'NAME': 'Any_Day_Sommelier',
         'USER': 'sommelier',
         'PASSWORD': 'anyday',
         'HOST': 'localhost'
@@ -123,6 +128,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Static files (CSS, JavaScript, Images)
@@ -139,3 +145,4 @@ STATICFILES_DIRS = (
 # Configure Django App for Heroku.
 import django_heroku
 django_heroku.settings(locals())
+parent of 11807f7... things were added to make heroku work
