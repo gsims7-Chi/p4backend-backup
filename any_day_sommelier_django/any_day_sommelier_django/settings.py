@@ -127,7 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-<<<<<<< HEAD
+
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -145,5 +145,4 @@ STATICFILES_DIRS = (
 # Configure Django App for Heroku.
 import django_heroku
 django_heroku.settings(locals())
-=======
->>>>>>> parent of 11807f7... things were added to make heroku work
+parent of 11807f7... things were added to make heroku work
