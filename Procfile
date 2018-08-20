@@ -1,1 +1,1 @@
-web: gunicorn Any_Day_Sommelier:app
+web: gunicorn any_day_sommelier_django/wsgi:application
